@@ -18,7 +18,7 @@ import React from 'react'
                     <img src="http://openweathermap.org/img/wn/01d@2x.png" 
                     className='width-12 my-1 ' alt="" />
                 </p>
-                <p className="font-medium">22* </p>
+                <p className="font-medium">22° </p>
 
             </div>
 
@@ -28,7 +28,7 @@ import React from 'react'
                     <img src="http://openweathermap.org/img/wn/01d@2x.png" 
                     className='width-12 my-1 ' alt="" />
                 </p>
-                <p className="font-medium">22* </p>
+                <p className="font-medium">22° </p>
 
             </div>
 
@@ -38,7 +38,7 @@ import React from 'react'
                     <img src="http://openweathermap.org/img/wn/01d@2x.png" 
                     className='width-12 my-1 ' alt="" />
                 </p>
-                <p className="font-small">22* </p>
+                <p className="font-small">22° </p>
 
             </div>
 
@@ -48,7 +48,7 @@ import React from 'react'
                     <img src="http://openweathermap.org/img/wn/01d@2x.png" 
                     className='width-12 my-1 ' alt="" />
                 </p>
-                <p className="font-medium">22* </p>
+                <p className="font-medium">22° </p>
 
             </div>
 
@@ -58,7 +58,7 @@ import React from 'react'
                     <img src="http://openweathermap.org/img/wn/01d@2x.png" 
                     className='width-12 my-1 ' alt="" />
                 </p>
-                <p className="font-medium">22* </p>
+                <p className="font-medium">22° </p>
 
             </div>
 
