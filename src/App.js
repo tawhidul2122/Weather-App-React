@@ -6,12 +6,13 @@ import TopButtons from './components/TopButtons';
 import Inputs from './components/Inputs';
 import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
+import Forecast from './components/Forecast';
 
 
 function App() {
   return (
     <div className='mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br
-     from-cyan-800 to to-blue-700 h-fit shadow-xl shadow-green-300 '>
+     from-cyan-600 to to-blue-600 h-fit shadow-xl shadow-green-300 '>
 
 
       <TopButtons/>
@@ -20,6 +21,8 @@ function App() {
 
       <TimeAndLocation/>
       <TemperatureAndDetails/>
+      <Forecast title="Hourly Forecast"/>
+      <Forecast title="Daily Forecast"/>
 
 
 
