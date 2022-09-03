@@ -8,18 +8,25 @@ import TimeAndLocation from './components/TimeAndLocation';
 import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
 import getWeatherData from './services/WeatherService';
+import getFormattedWeatherData from './services/WeatherService';
 
 
 function App() {
 
+  const [query,setQueru]= useState({q:'London'})
+  const [units,setUnits]=useState('metric')
+  const [weather,setWeather] = useState(null)
+
+  useEffect{()=>
+  }
+
+
+
   const fetchWeather =async() =>
   {
-    // const data= await getWeatherData();
-    //if weather api then
-    //const data= await getWeatherData('current.json', { q:"London" , aqi:"no"});
+   
+    const data= await getFormattedWeatherData({ q:"London"} );
 
-    //if weathermap API then
-    const data= await getWeatherData('weather', { q:"London" });
     console.log(data);
     
   };
@@ -35,8 +42,9 @@ function App() {
 
       <TimeAndLocation/>
       <TemperatureAndDetails/>
-      <Forecast title="Hourly Forecast"/>
-      <Forecast title="Daily Forecast"/>
+      {/* <Forecast title="Hourly Forecast"/>
+      <Forecast title="Daily Forecast"/> */}
+      {/* //no daily + weekly update on free api */}
 
 
 
