@@ -14,9 +14,11 @@ function App() {
 
   const fetchWeather =async() =>
   {
-    const data= await getWeatherData('weather',{ id: 524901});
+    // const data= await getWeatherData();
+    const data= await getWeatherData('current.json', { q:"London" , aqi:"no"});
     console.log(data);
-  }
+    
+  };
   fetchWeather();
   return (
     <div className='mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br
