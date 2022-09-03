@@ -15,7 +15,11 @@ function App() {
   const fetchWeather =async() =>
   {
     // const data= await getWeatherData();
-    const data= await getWeatherData('current.json', { q:"London" , aqi:"no"});
+    //if weather api then
+    //const data= await getWeatherData('current.json', { q:"London" , aqi:"no"});
+
+    //if weathermap API then
+    const data= await getWeatherData('weather', { q:"London" });
     console.log(data);
     
   };
