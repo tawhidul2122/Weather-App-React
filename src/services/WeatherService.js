@@ -44,35 +44,10 @@ const fomatCurrentWeather= (data) => {
 }
 
 const formatForecastWeather = (data) => {
-    // let {
-    //     timezone,daily,hourly
-    // }=data;
-    // console.log(data);
-    // daily=daily.slice(1,6).map(d=>{
-    //     return{
-    //         title:formatToLocalTime(d.dt,timezone,'ccc'),
-    //         temp:d.temp.day,
-    //         icon:d.weather[0].icon
 
-    //     }
-
-        
-
-
-    // }
-    // );
-
-    // hourly=hourly.slice(1,6).map(d=>{
-    //     return{
-    //         title:formatToLocalTime(d.dt,timezone,'hh:mm a'),
-    //         temp:d.temp.day,
-    //         icon:d.weather[0].icon
-    //     }
-    // }
-    // );
-
-    // return {timezone,daily,hourly}
-    //don't have the daily data in free api
+   /**
+    * ! The free API Doesn't provide the daily & hourly update so --> 
+    */
 
 
 };

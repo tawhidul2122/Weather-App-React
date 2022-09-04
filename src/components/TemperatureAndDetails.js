@@ -55,36 +55,39 @@ import { formatToLocalTime, iconUrlFromCode } from '../services/WeatherService'
       </div>
     </div>
 
-    <div className='flex flex-row items-center justify-center first-letter 
-    spcae-x-2 text-white text-sm py-3'>
-        <UilSun/>
-        <p className='font-light'>Sun Rise: <span
-        className='font-medium ml-1'>{formatToLocalTime(sunrise,timezone,
-        'hh:mm a ')}
-            </span></p>
-            <p className='font-light'>| </p>
+  
+    <div className="flex flex-row items-center justify-center space-x-2 text-white text-sm py-7">
+        <UilSun />
+        <p className="font-light">
+          Rise:{" "}
+          <span className="font-medium ml-1">
+            {formatToLocalTime(sunrise, timezone, "hh:mm a")}
+          </span>
+        </p>
+        <p className="font-light">|</p>
 
-            <UilSunset/>
-        <p className='font-light'>Sun Set: <span
-        className='font-small ml-1'>{formatToLocalTime(sunset,timezone,
-          'hh:mm a ')}
-            </span></p>
-            <p className='font-light ml-1'> |    </p>
+        <UilSunset />
+        <p className="font-light">
+          Set:{" "}
+          <span className="font-medium ml-1">
+            {formatToLocalTime(sunset, timezone, "hh:mm a")}
+          </span>
+        </p>
+        <p className="font-light">|</p>
 
-            <UilSun/>
-        <p className='font-light'>High: <span
-        className='font-small ml-1 mr-1'>{`${temp_max.toFixed()}`}°
-            </span></p>
-            <p className='font-light ml-1'>|</p>
+        <UilSun />
+        <p className="font-light">
+          High:{" "}
+          <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
+        </p>
+        <p className="font-light">|</p>
 
-            <UilSun/>
-        <p className='font-light'>Low: <span
-        className='font-small ml-1'>{`${temp_min.toFixed()}`}°
-            </span></p>
-            
-
-
-    </div>
+        <UilSun />
+        <p className="font-light">
+          Low:{" "}
+          <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
+        </p>
+      </div>
 
 
 
