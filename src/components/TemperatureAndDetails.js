@@ -9,33 +9,48 @@ import { UilSearch,
     UilSun,
     UilSunset,
  } from '@iconscout/react-unicons'
+import { formatToLocalTime, iconUrlFromCode } from '../services/WeatherService'
 
- function TemperatureAndDetails() {
+ function TemperatureAndDetails({weather:{
+  details,
+  icon,
+  temp,
+  temp_min,
+  temp_max,
+  sunrise,
+  sunset,
+  speed,
+  humidity,
+  feels_like,
+  timezone
+ },
+}) 
+{
   return (
   <div>
     
     <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
-      <p>Cloudy Or Whatever</p>
+      <p>{details}</p>
     </div>
     
     <div className="flex flex-row items-center justify-between text-white py-3">
-      <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" className="w-20" />
-      <p className="text-5xl">33°</p> 
+      <img src= {iconUrlFromCode(icon)}alt="" className="w-20" />
+      <p className="text-5xl">{`${temp.toFixed()}`}°</p> 
       <div className="flex flex-col space-y-2">
         <div className="flex font-light text-sm items-center justify-center">
           <UilTemperature size={18} className="mr-1" />
-          Real fell:
-          <span className="font-medium ml-1">44°</span>
+          Feels Like:
+          <span className="font-medium ml-1">{`${feels_like.toFixed()}`}°</span>
         </div>
         <div className="flex font-light text-sm items-center justify-center">
           <UilTear size={18} className="mr-1" />
           Humidity:
-          <span className="font-medium ml-1">56%</span>
+          <span className="font-medium ml-1">{`${humidity.toFixed()}`}%</span>
         </div>
         <div className="flex font-light text-sm items-center justify-center">
           <UilWind size={18} className="mr-1" />
           Wind:
-          <span className="font-medium ml-1">23 km/h</span>
+          <span className="font-medium ml-1">{`${speed.toFixed()}`}kmph</span>
         </div>
       </div>
     </div>
@@ -43,26 +58,28 @@ import { UilSearch,
     <div className='flex flex-row items-center justify-center first-letter 
     spcae-x-2 text-white text-sm py-3'>
         <UilSun/>
-        <p className='font-light'>Rise: <span
-        className='font-medium ml-1'>06:45 am
+        <p className='font-light'>Sun Rise: <span
+        className='font-medium ml-1'>{formatToLocalTime(sunrise,timezone,
+        'hh:mm a ')}
             </span></p>
             <p className='font-light'>| </p>
 
             <UilSunset/>
-        <p className='font-light'>Set: <span
-        className='font-small ml-1'>06:45 pm
+        <p className='font-light'>Sun Set: <span
+        className='font-small ml-1'>{formatToLocalTime(sunset,timezone,
+          'hh:mm a ')}
             </span></p>
             <p className='font-light ml-1'> |    </p>
 
             <UilSun/>
         <p className='font-light'>High: <span
-        className='font-small ml-1 mr-1'>45*
+        className='font-small ml-1 mr-1'>{`${temp_max.toFixed()}`}°
             </span></p>
             <p className='font-light ml-1'>|</p>
 
             <UilSun/>
         <p className='font-light'>Low: <span
-        className='font-small ml-1'>23*
+        className='font-small ml-1'>{`${temp_min.toFixed()}`}°
             </span></p>
             
 
